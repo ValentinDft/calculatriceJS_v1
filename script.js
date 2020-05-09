@@ -3,7 +3,7 @@ let nb1;
 let nb2;
 let verif_nb1;
 let verif_nb2;
-let result
+let result;
 
 function demandeUtilisateur() {
     do {
@@ -27,11 +27,25 @@ function demande2Nombre() {
         verif_nb1 = isNaN(nb1);
         verif_nb2 = isNaN(nb2);
 
+        nb1 = parseInt(nb1);
+        nb2 = parseInt(nb2);
+
     } while (verif_nb1 && verif_nb2 != true);
     return nb1, nb2;
 }
 
 demande2Nombre();
+
+switch (choix) {
+    case 1:
+        addition(nb1, nb2);
+        alert(result);
+        break;
+
+    default:
+        alert("Foutu la team");
+        break;
+}
 
 function addition(nb1, nb2) {
     result = nb1 + nb2;
