@@ -45,6 +45,10 @@ switch (choix) {
         multiplication(nb1, nb2);
         alert(result);
         break;
+    case 3:
+        soustraction(nb1, nb2);
+        alert(result);
+        break;
     default:
         alert("Foutu la team");
         break;
@@ -57,5 +61,10 @@ function addition(nb1, nb2) {
 
 function multiplication(nb1, nb2) {
     result = nb1 * nb2;
+    return result;
+}
+
+function soustraction(nb1, nb2) {
+    result = nb1 - nb2;
     return result;
 }
