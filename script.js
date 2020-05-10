@@ -41,7 +41,10 @@ switch (choix) {
         addition(nb1, nb2);
         alert(result);
         break;
-
+    case 2:
+        multiplication(nb1, nb2);
+        alert(result);
+        break;
     default:
         alert("Foutu la team");
         break;
@@ -49,5 +52,10 @@ switch (choix) {
 
 function addition(nb1, nb2) {
     result = nb1 + nb2;
+    return result;
+}
+
+function multiplication(nb1, nb2) {
+    result = nb1 * nb2;
     return result;
 }
