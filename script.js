@@ -11,7 +11,7 @@ function demandeUtilisateur() {
         choix = prompt("Que voulez-vous faire ? \n\n 1 - Addition \n 2 - Multiplication \n 3 - Soustraction \n 4 - Division");
         choix = parseInt(choix);
     
-    } while (choix > 5 || choix == 0);
+    } while (choix > 4 || choix == 0);
     return choix;
 }
 
@@ -49,8 +49,12 @@ switch (choix) {
         soustraction(nb1, nb2);
         alert(result);
         break;
+    case 4:
+        division(nb1, nb2);
+        alert(result);
+        break;
     default:
-        alert("Foutu la team");
+        alert("Erreur de calcul!!!");
         break;
 }
 
@@ -66,5 +70,10 @@ function multiplication(nb1, nb2) {
 
 function soustraction(nb1, nb2) {
     result = nb1 - nb2;
+    return result;
+}
+
+function division(nb1, nb2) {
+    result = nb1 / nb2;
     return result;
 }
